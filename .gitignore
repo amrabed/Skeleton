@@ -13,3 +13,9 @@
 /captures
 .externalNativeBuild
 .cxx
+
+/fastlane-service-account-key.json
+/keystore.jks
+/keystore.properties
+/private_key.pepk
+/deployment_cert.der
