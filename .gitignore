@@ -14,8 +14,11 @@
 .externalNativeBuild
 .cxx
 
+/firebase/
 /fastlane-service-account-key.json
 /keystore.jks
 /keystore.properties
 /private_key.pepk
 /deployment_cert.der
+/gcloud-service-key.json
+/instrumentation_output.txt

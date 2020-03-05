@@ -12,10 +12,11 @@ A template project for Android applications that comes out of the box with:
 - Java 8 Support
 - Automatic App Signing
 - GitHub Version Control
-- [CircleCI](https://circleci.com) Continuous Integration
+- [Firebase](https://firebase.google.com) Integration
+- [FastLane](https://fastlane.tools) App Automation
+- [CircleCI](https://circleci.com) Continuous Integration and Delivery
 - [SonarCloud](https://sonarcloud.io) Code Quality
 - [Snyk](https://snyk.io) Vulnerability Check
-- [FastLane](https://fastlane.tools) App Deployment Automation
 - README file with [shield-style](https://shields.io) badges
 - MIT License file
 

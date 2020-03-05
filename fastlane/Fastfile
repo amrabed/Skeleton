@@ -16,9 +16,19 @@
 default_platform(:android)
 
 platform :android do
-  desc "Runs all the tests"
+  desc "Run the tests on Firebase test lab"
   lane :test do
-    gradle(task: "test")
+    gradle( task: "clean assembleDebug assembleAndroidTest")
+    run_tests_firebase_testlab(
+      project_id: "skeleton-101",
+      gcloud_service_key_file: "gcloud-service-key.json",
+      devices: [
+        {
+          model: "Nexus6P",
+          version: "27"
+        }
+      ]
+    )
   end
 
   # Requires running Emulator with Google API system image"

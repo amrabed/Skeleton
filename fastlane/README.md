@@ -20,7 +20,7 @@ or alternatively using `brew cask install fastlane`
 ```
 fastlane android test
 ```
-Runs all the tests
+Run the tests on Firebase test lab
 ### android screenshots
 ```
 fastlane android screenshots

@@ -27,6 +27,12 @@ commands:
       - run:
           name: Create fastlane-service-account-key.json
           command: echo $DEPLOY_KEY | base64 -d > fastlane-service-account-key.json
+      - run:
+          name: Create google-services.json
+          command: echo $GOOGLE_SERVICES | base64 -d > app/google-services.json
+      - run:
+          name: Create gcloud-service-key.json
+          command: echo $GCLOUD_KEY | base64 -d > gcloud-service-key.json
 
   save-gradle-cache:
     description: "Save Gradle cache"
@@ -73,6 +79,18 @@ jobs:
           command: ./gradlew sonarqube
       - save-gradle-cache
 
+  test:
+    executor: android
+    steps:
+      - checkout
+      - restore-keys
+      - install-fastlane
+      - restore-gradle-cache
+      - run:
+          name: Run tests on Firebase Test Lab
+          command: bundle exec fastlane test
+      - save-gradle-cache
+
   deploy:
     executor: android
     steps:
@@ -93,9 +111,15 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - deploy:
+      - test:
           requires:
             - build
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - test
           filters:
             tags:
               only: /^v.*/
