@@ -1,12 +1,14 @@
 package com.amrabed.skeleton
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.fragment.app.FragmentActivity
 
-class MainActivity : Activity() {
-
+class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.main_activity)
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragment, ItemListFragment())
+            .commit()
     }
 }

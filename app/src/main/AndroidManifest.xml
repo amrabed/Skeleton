@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup"
         android:icon="@mipmap/icon"
-        android:label="@string/app_name"
+        android:label="@string/appName"
         android:roundIcon="@mipmap/round_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

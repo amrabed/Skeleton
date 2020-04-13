@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Skeleton</string>
+    <string name="appName">Skeleton</string>
+    <string name="itemImage">Item image</string>
+    <string name="title">Title</string>
+    <string name="summary">Summary</string>
+    <string name="itemRemoved">Item removed</string>
+    <string name="undo">Undo</string>
+    <string name="edit">Edit</string>
 </resources>
