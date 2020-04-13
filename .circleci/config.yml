@@ -111,15 +111,16 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - test:
-          requires:
-            - build
-          filters:
-            tags:
-              only: /.*/
+      #      - test:
+      #          requires:
+      #            - build
+      #          filters:
+      #            tags:
+      #              only: /.*/
       - deploy:
           requires:
-            - test
+            - build
+          #            - test
           filters:
             tags:
               only: /^v.*/

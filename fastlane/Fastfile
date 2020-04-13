@@ -24,8 +24,8 @@ platform :android do
       gcloud_service_key_file: "gcloud-service-key.json",
       devices: [
         {
-          model: "Nexus6P",
-          version: "27"
+          model: "walleye",
+          version: "28"
         }
       ]
     )
